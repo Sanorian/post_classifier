@@ -1,5 +1,11 @@
 services:
   backend:
-    build: .
+    build: app
     ports:
       - 8080:8080
+  web:
+    build: streamlit
+    ports:
+      - 80:8501
+    depends_on:
+      - backend
