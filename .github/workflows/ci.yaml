@@ -26,7 +26,8 @@ jobs:
         run: echo "IMAGE_NAME=${{ env.IMAGE_NAME }}" > .env
 
       - name: Build images with Compose
-        run: docker compose up --build
+        run: docker compose build
+          docker compose up&
 
       - name: Testing by pytest
         run: |
