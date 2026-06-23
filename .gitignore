@@ -2,3 +2,4 @@ __pycache__
 catboost_info
 mlruns
 mlflow.db
+.create_model.py

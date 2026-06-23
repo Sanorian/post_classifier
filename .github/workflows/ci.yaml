@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ main ]   # триггер только для main
+    branches: [ main ]
 
 jobs:
   test-and-build:
@@ -21,6 +21,7 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
+          pip install pytest
 
       - name: Run pytest
         run: pytest
