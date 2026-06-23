@@ -9,7 +9,7 @@ categories = [
 ```
 
 ## EDA:
-![Количество документов на класс]('https://github.com/Sanorian/post_classifier/blob/main/images/documents_count.png')
+![Количество документов на класс](https://github.com/Sanorian/post_classifier/blob/main/images/documents_count.png)
 ### Распределение по классам
 ```
 category
@@ -23,7 +23,7 @@ Name: count, dtype: int64
 Минимум: 910, максимум: 999
 Разброс: 89
 ```
-![Распределение длин текстов]('https://github.com/Sanorian/post_classifier/blob/main/images/length_words.png')
+![Распределение длин текстов](https://github.com/Sanorian/post_classifier/blob/main/images/length_words.png)
 ### Статистика длин текстов
 ```
 count     5853.000000
@@ -100,7 +100,7 @@ Run #3: logreg-gridsearch: best_params={'max_features': 40000, 'C': 5}, acc=0.93
 
 Лучшая модель: logreg-gridsearch (f1_macro = 0.9372)
 ```
-![Confusion matrix]('https://github.com/Sanorian/post_classifier/blob/main/images/confusion_matrix.png')
+![Confusion matrix](https://github.com/Sanorian/post_classifier/blob/main/images/confusion_matrix.png)
 
 ### Топ-3 пары классов, которые модель путает чаще всего (нормализованная доля ошибок):
 ```
