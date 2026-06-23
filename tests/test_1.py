@@ -7,4 +7,4 @@ def check_health():
 
 def test_health_endpoint():
     health_status = check_health()
-    assert health_status["status"] == "ok", "Health check failed. Model or vectorizer may not be loaded."
+    assert int(health_status["num_classes"]) == 6

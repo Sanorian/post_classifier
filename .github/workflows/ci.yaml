@@ -28,5 +28,10 @@ jobs:
       - name: Build images with Compose
         run: docker compose build
 
+      - name: Testing by pytest
+        run: |
+          pip install pytest requests
+          pytest
+
       - name: Push images with Compose
         run: docker compose push

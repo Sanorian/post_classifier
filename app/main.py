@@ -35,6 +35,8 @@ class ClassifyPostRequest(BaseModel):
 def classify(request: ClassifyPostRequest):
     if model is None or vectorizer is None or categories is None:
         raise HTTPException(status_code=503, detail="Модель или векторизатор не загружены")
+    if request.text=="":
+        raise HTTPException(status_code=422, detail="Пустой текст не может быть классифицирован")
     try:
         X = vectorizer.transform([request.text])
         proba = model.predict_proba(X)[0]
