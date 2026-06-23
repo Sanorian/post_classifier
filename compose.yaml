@@ -1,6 +1,7 @@
 services:
   backend:
     build: app
+    image: ${IMAGE_NAME:-myapp:latest}
     ports:
       - 8080:8080
   web:
