@@ -32,7 +32,7 @@ jobs:
       - name: Testing by pytest
         run: |
           pip install pytest requests
-          docker compose up&
+          docker compose up& sleep 10
           pytest
 
       - name: Push images with Compose
