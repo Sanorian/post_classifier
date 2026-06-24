@@ -7,6 +7,12 @@ categories = [
     'comp.graphics', 'talk.politics.guns',
 ]
 ```
+## Для запуска приложения:
+```
+https://github.com/Sanorian/post_classifier.git
+cd post_classifier
+docker-compose up
+```
 
 ## EDA:
 ![Количество документов на класс](https://github.com/Sanorian/post_classifier/blob/main/images/documents_count.png)
@@ -107,10 +113,4 @@ Run #3: logreg-gridsearch: best_params={'max_features': 40000, 'C': 5}, acc=0.93
     rec.sport.baseball -> sci.space: 0.053 (доля ошибочных предсказаний для класса rec.sport.baseball)
     comp.graphics -> sci.med: 0.038 (доля ошибочных предсказаний для класса comp.graphics)
     comp.graphics -> rec.sport.hockey: 0.030 (доля ошибочных предсказаний для класса comp.graphics)
-```
-
-## Для запуска приложения:
-```
-https://github.com/Sanorian/post_classifier.git
-docker-compose up
 ```
