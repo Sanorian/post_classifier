@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 import pandas as pd
 import matplotlib.pyplot as plt
+from deep_translator import GoogleTranslator
 
 st.set_page_config(page_title="Классификация статей", layout="centered")
 st.title("Классификация текста статьи")
@@ -17,7 +18,8 @@ if st.button("Классифицировать"):
     else:
         with st.spinner("Отправка запроса к модели..."):
             try:
-                response = requests.post(API_URL, json={"text": user_text}, timeout=10)
+                en_text = GoogleTranslator(source='auto', target='en').translate(user_text)
+                response = requests.post(API_URL, json={"text": en_text}, timeout=10)
                 response.raise_for_status()
                 data = response.json()
 
